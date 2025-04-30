@@ -4,17 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dialog 요소 popover 속성</title>
-    <link
-      rel="shortcut icon"
-      href="/public/favicon/likelion.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
     <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
-    <link
-      rel="preload"
-      as="font"
-      href="/public/font/suit/SUIT-Variable.woff2"
-    />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
     <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
     <style>
       body {
@@ -47,16 +39,9 @@
 
     <button type="button" class="show-dialog">혜택보기</button>
 
-    <dialog
-      class="panel-dialog"
-      aria-labelledby="suprise-benefits"
-      aria-describedby="suprise-benefits-details"
-    >
+    <dialog class="panel-dialog" aria-labelledby="suprise-benefits" aria-describedby="suprise-benefits-details">
       <h2 id="suprise-benefits">깜짝 혜택</h2>
-      <p id="suprise-benefits-details">
-        쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일
-        만나요!
-      </p>
+      <p id="suprise-benefits-details">쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일 만나요!</p>
       <div>
         <a href="/">쿠폰 확인하기</a>
         <button type="button" class="dismiss-today">오늘 하루 안보기</button>
@@ -65,14 +50,9 @@
     </dialog>
     <hr />
     <!-- popover 속성 -->
-    <button type="button" popovertarget="popoverContent" class="button-popover">
-      팝오버 보기
-    </button>
+    <button type="button" popovertarget="popoverContent" class="button-popover">팝오버 보기</button>
     <div popover id="popoverContent">
-      <p>
-        팝오버는 툴팁과 비슷한 UI 요소로, 추가적인 정보를 제공하거나 사용자와
-        상호작용할 수 있는 작은 창을 표시할 때 유용하다.
-      </p>
+      <p>팝오버는 툴팁과 비슷한 UI 요소로, 추가적인 정보를 제공하거나 사용자와 상호작용할 수 있는 작은 창을 표시할 때 유용하다.</p>
     </div>
   </body>
 </html>
