@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소 popover 속성</title>
+    <link
+      rel="shortcut icon"
+      href="/public/favicon/likelion.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link
+      rel="preload"
+      as="font"
+      href="/public/font/suit/SUIT-Variable.woff2"
+    />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <style>
+      body {
+        font-family: 'SUIT Variable', sans-serif;
+      }
+      dialog.panel-dialog::backdrop {
+        background: linear-gradient(to right, #ffcccb, #ccffcc);
+      }
+    </style>
+    <script type="module">
+      const showDialogBtn = document.querySelector('.show-dialog');
+      const closeDialogBtn = document.querySelector('.close-dialog');
+      const dismissTodayBtn = document.querySelector('.dismiss-today');
+      const dialogEl = document.querySelector('.panel-dialog');
+
+      // 혜택 보기 버튼 클릭 시 다이얼로그 표시
+      showDialogBtn.addEventListener('click', () => {
+        dialogEl.showModal();
+      });
+
+      // 닫기 버튼 클릭 시 다이얼로그 닫기
+      closeDialogBtn.addEventListener('click', () => {
+        dialogEl.close();
+      });
+    </script>
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+
+    <button type="button" class="show-dialog">혜택보기</button>
+
+    <dialog
+      class="panel-dialog"
+      aria-labelledby="suprise-benefits"
+      aria-describedby="suprise-benefits-details"
+    >
+      <h2 id="suprise-benefits">깜짝 혜택</h2>
+      <p id="suprise-benefits-details">
+        쉿! 고객님만을 위한 깜짝 할인 쿠폰 어제 빠뜨린 상품도 할인받고 내일
+        만나요!
+      </p>
+      <div>
+        <a href="/">쿠폰 확인하기</a>
+        <button type="button" class="dismiss-today">오늘 하루 안보기</button>
+        <button type="button" class="close-dialog">닫기</button>
+      </div>
+    </dialog>
+  </body>
+</html>
