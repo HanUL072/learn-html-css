@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 선택자</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="font" href="/public/font/suit/SUIT-Variable.woff2" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/css/styles/02-selector.css" />
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>CSS 선택자</h1>
+    <h2>가상요소 선택자</h2>
+    <section>
+      <h3>가상 요소란?</h3>
+      <p>실제 DOM에는 존재하지 않지만, CSS를 통해 가상으로 생성된 요소를 선택하여 스타일을 적용할 수 있습니다.</p>
+    </section>
+    <h2>전체 선택자</h2>
+    <p>전체 선택자는 모든 요소를 선택하여 스타일을 적용할 수 있습니다.</p>
+    <p>hihihihi</p>
+    <h2>요소 선택자</h2>
+    <p>요소 선택자는 HTML 요소 이름 즉 태그명을 사용하여 선택하고 스타일을 적용할 수 있습니다.</p>
+    <h2>클래스 선택자</h2>
+    <p class="like">클래스 선택자는 요소의 클래스 명을 선택하여 스타일을 적용할 수 있습니다.</p>
+    <h2>아이디 선택자</h2>
+    <p id="lion">아이디 선택자는 요소의 아이디 명을 선택하여 스타일을 적용할 수 있습니다.</p>
+    <h2 title="속성 선택자 예시">속성 선택자</h2>
+    <p title="속성 선택자 예시">속성 선택자는 요소의 <span>속성의 유뮤</span>나 속성 값의 조건에 따라 스타일을 적용할 수 있습니다.</p>
+    <hr />
+    <h2>자손 결합자</h2>
+    <div>
+      <p>두 개 또는 그 이상의 <span class="combinator">선택자를 조합</span>하여, 가장 마지막 선택자의 부모 요소가 존재할 경우 해당 선택자에 스타일을 적용할 수 있습니다.</p>
+    </div>
+    <h2>자식 결합자</h2>
+    <ul>
+      <li>
+        아이템1
+        <ol>
+          <li>서브 아이템1</li>
+        </ol>
+      </li>
+      <li>
+        아이템2
+        <ol>
+          <li>서브 아이템2</li>
+        </ol>
+      </li>
+      <li>
+        아이템3
+        <ol>
+          <li>서브 아이템3</li>
+        </ol>
+      </li>
+    </ul>
+    <h2>형제 결합자</h2>
+    <div>hi I'm fine, thank you</div>
+    <p>인접 형제 선택자</p>
+    <p>인접 형제 선택자</p>
+    <p>인접 형제 선택자</p>
+    <h2></h2>
+  </body>
+</html>

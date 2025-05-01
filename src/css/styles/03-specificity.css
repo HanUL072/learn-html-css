@@ -1,0 +1,39 @@
+/* 상속,겹침,우선순위 */
+.wrapper {
+  color: green;
+  border: 1px dotted blue;
+}
+
+/* #container p {
+  color: teal;
+} */
+
+.wrapper {
+  border: inherit;
+}
+
+p.ai {
+  color: purple;
+}
+
+.ai {
+  color: red;
+}
+
+p {
+  color: silver;
+}
+
+p {
+  color: orange;
+}
+
+p {
+  color: pink !important;
+}
+/* 겹침 */
+body {
+  color: red;
+}
+
+/* 겹침, 우선순위(선택자) */

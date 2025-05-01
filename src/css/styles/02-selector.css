@@ -1,0 +1,85 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* 전체 선택자 */
+* {
+  font-weight: 300;
+  font-family:
+    'Pretendard Variable',
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    sans-serif;
+}
+
+/* 요소(태그) 선택자 - Type selectors */
+p {
+  color: blue;
+}
+
+/* 클래스 선택자 - Class selectors */
+.like {
+  font-size: 24px;
+  color: red;
+}
+
+/* 아이디 선택자 - ID selector */
+#lion {
+  background-color: yellow;
+}
+
+/* 속성 선택자 - Attribute selectors */
+[title] {
+  border: 1px solid black;
+}
+
+/* 자손 결합자 Descendant combinator */
+div p {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+div p .combinator {
+  color: green;
+}
+
+/* 자식 결합자 - Child combinator */
+ul > li {
+  border: 1px solid green;
+}
+
+/* 인접 형제 결합자 - Next-sibling combinator */
+h2 + p {
+  font-style: italic;
+}
+
+/* 일반 형제 결합자 - Subsequent-sibling combinator */
+div ~ p {
+  font-weight: 700;
+}
+
+/* 가상요소 선택자 */
+section {
+  border: 1px solid green;
+  padding: 20px;
+  margin: 20px;
+}
+
+section::before {
+  content: '멋쟁이 사자처럼';
+  color: red;
+}
+
+section::after {
+  content: '프론트엔드 부트캠프';
+  color: green;
+}
