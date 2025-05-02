@@ -1,0 +1,28 @@
+/* 박스 모델 */
+/* block box */
+/* border 스타일링 */
+.lion {
+  background-color: #ffc;
+  border: 1px solid #333;
+
+  span {
+    background-color: #fcf;
+    display: block;
+    width: 5em;
+  }
+}
+
+/* inline box  */
+.like {
+  background-color: #ccc;
+  display: inline;
+  /* inline box 는 width 와 같은 크기를 직접 지정할 수 없다. */
+  width: 5em;
+}
+
+/* inline-block box */
+.bootcamp {
+  background-color: #cfc;
+  display: inline-block;
+  width: 300px;
+}
