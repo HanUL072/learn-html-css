@@ -1,9 +1,14 @@
 /* 박스 모델 */
 /* block box */
 /* border 스타일링 */
+/* padding 여백(안쪽) 스타일링 */
+/* box-sizing 설정 */
 .lion {
+  box-sizing: border-box;
   background-color: #ffc;
   border: 1px solid #333;
+  padding: 10px;
+  width: 500px;
 
   span {
     background-color: #fcf;
@@ -25,4 +30,25 @@
   background-color: #cfc;
   display: inline-block;
   width: 300px;
+}
+
+/* margin 여백(바깥쪽) 스타일링 */
+.frontend {
+  border: 1px solid blue;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .school {
+    border: 1px solid orange;
+    margin: 10px;
+  }
+}
+
+/* overflow 속성을 활용한 스타일링 */
+.techit {
+  border: 1px solid green;
+  padding: 10px;
+  margin: 10px;
+  height: 120px;
+  overflow: scroll;
 }
