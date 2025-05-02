@@ -1,0 +1,42 @@
+@import '/src/common/mini-reset.css';
+
+:root {
+  font-size: 10px;
+}
+
+/* 타이포그래피 및 단위 */
+/* 글자 크기 */
+/* em - 현재 글자크기를 기준으로 계산 (상속) */
+.lion {
+  font-size: 10px;
+
+  .like {
+    font-size: 1.5em;
+    color: orange;
+  }
+}
+
+/* rem - root를 기준으로 계산 */
+.bootcamp {
+  font-size: 20px;
+
+  .like {
+    font-size: 2rem;
+    color: blue;
+    line-height: 1.5;
+  }
+}
+
+/* vw - 뷰포트 기준으로 계산 */
+.school {
+  font-weight: 700;
+
+  .like {
+    font-size: 5vw;
+    color: green;
+
+    em {
+      font-style: oblique;
+    }
+  }
+}
