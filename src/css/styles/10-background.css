@@ -1,0 +1,44 @@
+/* 배경 스타일링 */
+body {
+  /* rgba() 함수로 배경 색상 적용하기 */
+  background-color: rgba(255, 255, 180, 0.8);
+  background-image: url(/src/assets/images/sun.png), url(/src/assets/images/cloud.png), url(/src/assets/images/tree.png);
+  background-repeat: no-repeat;
+  background-position:
+    200px 150px,
+    50px 150px,
+    50px 200px;
+  background-size:
+    100px,
+    auto,
+    300px 500px;
+  background-attachment: fixed;
+}
+
+h1 {
+  padding: 5px 100px;
+  font-size: 20px;
+  /* rgb() 함수로 배경 색상 적용하기*/
+  background-color: rgb(250, 160, 255, 0.7);
+  background-image: url('/src/assets/thumbnail/new.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+}
+
+a {
+  display: inline-block;
+  border: 1px solid currentColor;
+  padding: 10px 20px;
+  /* hsla() 함수로 배경색상 적용하기 (투명도 함께 지정가능) 
+  background-color: hsla(110, 50%, 50%, 0.5);
+  background-image: url('/src/assets/thumbnail/external-link.png');
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: 14px;
+  background-attachment: fixed; */
+
+  background: hsla(110, 50%, 50%, 0.5) url('/src/assets/thumbnail/external-link.png') no-repeat 0 50% /14px fixed;
+  /* 멀티 백그라운드를 설정할 때, 색상을 제일 뒤에 정의한다. 
+  /* ,url("/src/assets/thumbnail/new.png") no-repeat 0 50% /20px hsla(110, 50%, 50%, 0.5); */
+}
