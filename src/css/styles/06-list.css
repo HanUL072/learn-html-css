@@ -1,0 +1,21 @@
+/* 리스트 스타일링 */
+
+.likelion {
+  background-color: #fcf;
+
+  ol {
+    list-style: upper-roman url('../images/new.png') outside;
+    list-style-position: inside;
+    list-style-image: url('/src/assets/thumbnail/new.png');
+  }
+}
+
+.bootcamp {
+  background-color: #ffc;
+  list-style-type: none;
+  ul {
+    list-style-type: circle;
+    list-style-position: inside;
+    list-style-image: url('/src/assets/thumbnail/new.png');
+  }
+}
