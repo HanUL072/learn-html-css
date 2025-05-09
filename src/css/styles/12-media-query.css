@@ -1,0 +1,59 @@
+/* CSS 미디어쿼리 */
+/* 스크린 스타일 */
+body {
+  margin: 50px;
+  color: #fff;
+  background: #000;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+
+  /* 네스팅, 코드 축약 가능 */
+  /* 320px 이상의 디바이스 */
+  @media (width >= 320px) {
+    color: #ffc;
+    background: darkblue;
+  }
+
+  /* 768px 이상의 디바이스 */
+  @media (width >= 768px) {
+    color: pink;
+    background: green;
+  }
+
+  /* 1280px 이상의 디바이스 */
+  @media (width >= 1280px) {
+    color: red;
+    background: darksalmon;
+  }
+}
+
+h1 {
+  --spacing: 25px;
+
+  /* border: 1px solid currentColor; */
+  width: calc(500px + var(--spacing) * 2);
+  padding: var(--spacing);
+}
+/* 선택자 지정 안해주면 에러남 *
+/* 320px 이상의 디바이스 - small screen/break point (mobile) */
+/* @media screen and (min-width: 320px) {
+  body {
+    color: #ffc;
+    background: darkblue;
+  }
+} */
+
+/* 768px 이상의 디바이스 - tablet */
+/* @media screen and (min-width: 768px) {
+  body {
+    color: brown;
+    background: pink;
+  }
+} */
+
+/* 1280px 이상의 디바이스 - desktop */
+/* @media screen and (min-width: 1280px) {
+  body {
+    color: purple;
+    background: lightgreen;
+  }
+} */
