@@ -1,0 +1,36 @@
+body {
+  margin: 50px;
+}
+
+/* CSS Float */
+.bootcamp {
+  display: flow-root;
+  border: 1px solid red;
+  /* overflow: hidden; */
+  /* overflow를 설정하면 BFC가 형성됨 */
+
+  img {
+    width: 150px;
+    border: 1px solid green;
+  }
+
+  .tree {
+    float: right;
+    position: relative;
+    top: -30px;
+  }
+
+  .rabbit {
+    position: relative;
+    float: left;
+    left: -30px;
+  }
+
+  p {
+    background-color: #ffc;
+  }
+
+  .lion {
+    /* clear: both; */
+  }
+}
