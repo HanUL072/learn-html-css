@@ -1,0 +1,52 @@
+/* CSS Position */
+/* relative 값 */
+/* :nth-of-type(3) {
+  border: 1px solid red;
+  background-color: rgb(255 255 80 /1);
+  position: relative;
+  left: 100px;
+  top: 50px; 
+} */
+.like {
+  background-color: #000;
+  p {
+    border: 1px solid red;
+    background-color: rgb(255 255 80 /1);
+    position: relative;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+/* fixed 값 */
+/* viewport 를 기준으로 배치 */
+h1 {
+  background-color: pink;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  z-index: 999; /*z-index 값을 주면 레이어가 제일 위로 올라옴*/
+}
+
+/* absolute 값 */
+/* 컨테이닝 블럭을 기준으로 배치 */
+.bootcamp {
+  border: 1px solid blue;
+  position: relative;
+}
+.lion {
+  span {
+    background-color: rgb(100 255 30 /0.5);
+    border: 1px solid black;
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+}
+
+/* sticky 값 */
+.frontend {
+  background: var(--mint);
+  position: sticky;
+  top: 0; /*민트 영역이 top:0 좌표에 고정됨*/
+}
