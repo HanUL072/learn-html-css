@@ -1,0 +1,66 @@
+/* css 중첩 */
+/* 일반 CSS */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+}
+
+.parent .child {
+  color: white;
+  font-size: 16px;
+}
+
+/* CSS 중첩 */
+.parent {
+  background-color: #f4a261;
+  padding: 20px;
+  .child {
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.button {
+  color: red;
+  &:hover {
+    background-color: yellow;
+  }
+  &::before {
+    content: '콘텐츠';
+  }
+}
+
+/* 일반 CSS -media query*/
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* 일반 CSS -media query*/
+/* 부품을 고려해서 반응형을 만들 수 있음 */
+.container {
+  /* 모든 디바이스 */
+  width: 100%;
+  padding: 20px;
+
+  /* 최소 768px 이상 */
+  @media (min-width: 768px) {
+    width: 750px;
+  }
+}
+
+/* Sass와 차이점 */
+/* 아래와 같이 &기호를 부모 요소의 이름의 일부로 치환할 수 없다. */
+.menu__list {
+  &__item {
+  }
+}
+
+.menu__list .menu__item {
+}
