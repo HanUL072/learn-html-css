@@ -1,0 +1,63 @@
+:root {
+  --black: #121212;
+  --white: #fff;
+  --grey: #ddd;
+}
+
+/* 테이블 스타일링 */
+body {
+  margin: 50px;
+  color: var(--black);
+}
+
+.table-wrapper {
+  block-size: 500px;
+  overflow: auto;
+
+  table {
+    border: 1px solid currentColor;
+    /* width: 100%; 부모 크기만큼 키워줘 */
+    inline-size: 100%; /* 논리속성은 width 보다 나중에 쓰는걸 추천 */
+    border-spacing: 0; /* 테이블 박스간 공간 압축 */
+    border-collapse: collapse; /* col 선 병합*/
+  }
+
+  .number {
+    inline-size: 10%;
+  }
+  .name {
+    inline-size: 20%;
+  }
+  .email {
+    inline-size: 30%;
+  }
+  .phone {
+    inline-size: 40%;
+  }
+
+  thead,
+  tfoot {
+    color: var(--white);
+    background: var(--black); /* thead 와 tfoot 에 색 입히기*/
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+  }
+
+  /* 구조선택자 (even - 짝수 줄 선택) */
+  tbody tr:nth-child(3n + 2) {
+    background: var(--grey);
+  }
+
+  th,
+  td {
+    /* border: 1px solid currentColor; */
+    padding: 1em; /* padding 으로 들여쓰기 가능*/
+  }
+
+  td {
+    text-align: center;
+  }
+}
