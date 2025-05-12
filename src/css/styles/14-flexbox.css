@@ -1,0 +1,49 @@
+/* Flex 레이아웃 */
+body {
+  margin: 50px;
+}
+
+div {
+  div:nth-child(1) {
+    background: var(--yellow);
+  }
+  div:nth-child(2) {
+    background: var(--coral);
+  }
+  div:nth-child(3) {
+    background: var(--mint);
+  }
+  div:nth-child(4) {
+    background: var(--blue);
+  }
+}
+
+.lion {
+  inline-size: 400px;
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px red;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* flex-direction, flex-wrap 속성의 단축 속성 */
+  flex-flow: row wrap;
+
+  .lion-item {
+    /* background: yellow; */
+    inline-size: 150px;
+  }
+}
+
+/* float를 활용할 경우 */
+.like {
+  margin-block: 20px;
+  box-shadow: 0 0 0 10px blue;
+  display: flow-root;
+  /* display: block; */
+
+  .like-item {
+    /* background: pink; */
+    float: inline-end;
+    /* float: none; */
+  }
+}
