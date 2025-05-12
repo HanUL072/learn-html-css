@@ -1,0 +1,56 @@
+/* 알림 Notification */
+:root {
+  --green: #22be61;
+  --gray: #9b9a90;
+
+  --font-18: 1.125rem;
+  --font-14: 0.875rem;
+  --font-11: 0.6875rem;
+}
+
+body {
+  margin: 50px;
+}
+
+.notification {
+  border: 1px solid #989898;
+  border-radius: 0.5rem;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 20px;
+  min-inline-size: 260px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  > div {
+    /* background: yellow; */
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 4px;
+
+    strong,
+    time {
+      color: var(--green);
+    }
+
+    strong {
+      font-size: var(--font-18);
+    }
+
+    time {
+      font-size: var(--font-11);
+    }
+
+    p {
+      font-size: var(--font-14);
+      color: var(--gray);
+      inline-size: 100%;
+    }
+  }
+}
