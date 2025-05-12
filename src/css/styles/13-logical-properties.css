@@ -1,0 +1,37 @@
+/* CSS 논리 속성 및 논리 값 */
+body {
+  margin: 50px;
+}
+
+/* inline-size & block-size */
+.lion {
+  writing-mode: horizontal-tb;
+  background: var(--yellow);
+  /* width 속성의 논리 속성 - inline-size */
+  inline-size: 500px;
+  /* height 속성의 논리 속성 - block-size */
+  block-size: 300px;
+}
+
+/* inset */
+.like {
+  background: var(--blue);
+  position: fixed;
+  /* top: 20px;
+  right: 20px;
+  inset-block-start: 40px;
+  inset-inline-end: 40px; */
+  inset: 80px 80px auto auto; /* initial 초기값*/
+}
+
+/* block-start, inline-start, block-end, inline-end */
+.bootcamp {
+  background: var(--green);
+  text-align: end;
+
+  span {
+    background: var(--coral);
+    float: right;
+    float: inline-end;
+  }
+}
