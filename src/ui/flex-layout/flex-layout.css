@@ -1,0 +1,52 @@
+/* 스크롤이 없는 100% 레이아웃 */
+/* .container가 부모요소의 크기를 상속받을 수 있도록 높이를 100%로 지정 */
+html,
+body {
+  block-size: 100%;
+}
+
+/* 플렉스 컨테이너의 높이를 100%로 지정 */
+.container {
+  block-size: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+
+  .header,
+  .navigation,
+  .sidebar,
+  .main-conent,
+  .footer {
+    padding: 1em;
+  }
+
+  .header {
+    background: var(--pink);
+  }
+
+  .navigation {
+    background: var(--apricot);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    /* 스크롤이 발생했을 때 스크롤바가 보여지지 않도록 숨김 */
+    /* 스크롤바를 제거하면 경우에 따라 콘텐츠 일부가 보이지 않을 수 있어 주의 필요 */
+    overflow: hidden;
+  }
+
+  .sidebar {
+    inline-size: 12.5rem; /* 200px */
+    background: var(--lavender);
+  }
+
+  .main-content {
+    background: var(--mint);
+    flex-grow: 1;
+  }
+
+  .footer {
+    background: var(--gray);
+  }
+}
