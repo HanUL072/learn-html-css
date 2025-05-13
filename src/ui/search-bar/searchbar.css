@@ -12,39 +12,51 @@
   --end-color: var(--green-300);
 }
 
+/* body 여백 */
 body {
-  margin: 50px;
+  margin: 3.125rem;
 }
 
 /* 컴포넌트 스타일링 */
+/* SVG 로고 */
+.logo {
+  --size: 24px;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+}
+
 /* 텍스트 로고 */
 .text-logo {
-  --start-color: #1bf008;
-  --end-color: #03cca8;
-  --size: 34px;
+  --size: 2.1719rem;
 
-  background-color: pink;
   display: inline-flex;
   justify-content: center;
   align-items: center;
+  /* N 텍스트의 부모 요소의 크기를 글자크기의 70%로 설졍 (기본 자간 크기를 제거) */
+  inline-size: calc(var(--size) * 0.7);
+  /* background: red; */
 
   .text {
+    width: var(--size);
     text-transform: uppercase;
     font-size: var(--size);
-    line-height: 0.75;
+    line-height: 0.7;
     font-weight: 900;
     font-family: 'Montserrat', sans-serif;
     background-image: linear-gradient(var(--start-color), var(--end-color));
     background-clip: text;
     color: transparent;
+    position: relative;
+    top: -0.005em;
+    left: -0.005em;
   }
 }
 
 /* 입력 서식 */
 .form-input {
-  /* background: yellow; */
   font-size: 0.875rem;
-  line-height: 1.3; /* 130 */
+  line-height: 1.3;
   font-weight: 500;
   display: flex;
   flex-flow: row nowrap;
@@ -56,21 +68,24 @@ body {
   }
 
   input {
-    min-inline-size: 0; /* input 에는 기본적으로 min-inline 이 존재하기 때문에 초기화*/
+    --border-color: var(--gray-200);
+    --inactive-color: var(--gray-100);
+
+    min-inline-size: 0;
     flex-grow: 1;
-    border: 1px solid #aaa;
+    border: 1px solid var(--border-color);
     block-size: 32px;
-    padding-inline: 0.5em; /* 내 값의 절반이란 뜻 */
+    padding-inline: 0.5em;
     border-radius: 8px;
 
     &[readonly],
     &:read-only {
-      background: #ccc;
+      background-color: var(--inactive-color);
     }
   }
 }
 
-/* 비활성홯 버튼 스타일링 */
+/* 비활성화 버튼 스타일링 */
 button[disabled],
 button:disabled {
   cursor: not-allowed;
@@ -78,7 +93,6 @@ button:disabled {
 
 /* 상태 디자인 */
 .like-lion {
-  /* box-shadow: 0 0 0 10px red; */
   padding: 10px;
   border: 1px solid #aaa;
 
@@ -86,32 +100,31 @@ button:disabled {
     background: lime;
   }
 
-  /* &:focus-within {
-    background: #000;
+  /* &:focus-within{
+    background: yellow;
   } */
 
-  /* 입력서식에 마우스 오버 시 */
-  input:hover {
-    /* background: pink; */
-  }
+  /* 입력 서식에 마우스 오버 시 */
+  /* input:hover{
+    background: pink;
+  } */
 
   input:focus {
     outline: 0;
   }
 
   input:focus-visible {
-    /* outline: 2px solid green; */
-    box-shadow: 0 0 2px 1px green;
+    box-shadow: 0 0 1px 2px green;
   }
 }
 
-/* 버튼 스타일링 (원형 그라디언트 버튼) */
+/* 버튼 스타일링 (원형 그라디언트 버튼)*/
 .circle-button {
   --size: 1.5rem;
 
   border: 0;
   padding: 0;
-  background: var(--start-color) linear-gradient(-45deg, var(--end-color) 0%, var(--start-color) 100%);
+  background: var(--start-color) linear-gradient(-45deg, var(--end-color), var(--start-color));
   inline-size: var(--size);
   aspect-ratio: 1/1;
   border-radius: 50%;
@@ -129,19 +142,17 @@ button:disabled {
   }
 }
 
-/* 검색바 (폼 스타일링) */
+/* 검색 바 (폼 스타일링) */
 .search-bar {
   --border-color: var(--green-100);
   --shadow-color: var(--gray-100);
 
-  /* background: yellow; */
   border: 2px solid var(--border-color);
   padding: 0.75rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   column-gap: 0.75rem;
-  /* box-shadow: 0 0 0 1px var(--border-color); */
   border-radius: 6.25rem;
 
   &:focus-within {
@@ -157,29 +168,33 @@ button:disabled {
     margin-inline-start: 0.5rem;
   }
 
-  button {
-    margin-inline-start: 0.25rem;
-  }
-
-  /* 1. 오답 버튼이 나란히 안와 - form 에도 flex 추가 외에도 contents 로 설정*/
   form {
     display: contents;
   }
 
-  /* 2.오답: input 입력서식 길이 넓히기*/
   .form-input {
     flex-grow: 1;
 
     input {
       border: 0;
       outline: 0 none;
-      font-weight: 700px;
-      appearance: none;
-      padding: 0;
-
-      &::-webkit-search-cancel-button {
-        display: none;
-      }
+      font-weight: 700;
     }
+
+    /* MDN - https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling */
+    /* appearance: none을 선언하여 기본 스타일 비활성화 */
+    [type='search'] {
+      appearance: none;
+    }
+
+    /* X 버튼은 Safari, Chrome, Edge, Opera 등 webkit 및 blink 엔진을 사용하는 웹브라우저의 기본 스타일 */
+    /* X 버튼을 제거하고 싶다면 :-webkit-search-cancel-button 선택자를 사용하여 display 속성 값을 none으로 지정 */
+    [type='search']::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  button {
+    margin-inline-start: 0.25rem;
   }
 }
