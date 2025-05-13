@@ -130,3 +130,56 @@ button:disabled {
 }
 
 /* 검색바 (폼 스타일링) */
+.search-bar {
+  --border-color: var(--green-100);
+  --shadow-color: var(--gray-100);
+
+  /* background: yellow; */
+  border: 2px solid var(--border-color);
+  padding: 0.75rem;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 0.75rem;
+  /* box-shadow: 0 0 0 1px var(--border-color); */
+  border-radius: 6.25rem;
+
+  &:focus-within {
+    box-shadow: 0 2px 2px 1px var(--shadow-color);
+  }
+
+  a,
+  button {
+    flex-shrink: 0;
+  }
+
+  a {
+    margin-inline-start: 0.5rem;
+  }
+
+  button {
+    margin-inline-start: 0.25rem;
+  }
+
+  /* 1. 오답 버튼이 나란히 안와 - form 에도 flex 추가 외에도 contents 로 설정*/
+  form {
+    display: contents;
+  }
+
+  /* 2.오답: input 입력서식 길이 넓히기*/
+  .form-input {
+    flex-grow: 1;
+
+    input {
+      border: 0;
+      outline: 0 none;
+      font-weight: 700px;
+      appearance: none;
+      padding: 0;
+
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+    }
+  }
+}
