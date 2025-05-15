@@ -1,0 +1,48 @@
+/* 그리드 테이블 */
+body {
+  margin: 50px;
+  background: #000;
+  color: #fff;
+}
+
+.grid-table {
+  border-block: 1px solid #fff;
+  background: #333;
+  margin-block: 1.25rem;
+  font-size: 0.875rem;
+  min-inline-size: 530px;
+  padding: 10px;
+  /* column-gap: 12px; */
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(max-content, 3fr) minmax(max-content, 1fr) minmax(max-content, 1fr);
+  grid-template-rows: repeat(3, 48px) auto;
+  /* align-items: center; */
+
+  /* 구분선 */
+  dt,
+  dd,
+  > div {
+    border-bottom: 1px solid #aaa;
+    align-content: center;
+  }
+
+  dt:last-of-type {
+    /* background: darkblue; */
+    /* align-self: start; */
+    padding-block: 10px;
+    border-bottom: 0;
+    align-content: start;
+  }
+
+  > :is(dd, div, ):last-child {
+    /* background: orangered; */
+    /* border: 5px solid red; */
+    grid-area: 4 / 2 / 5 / span 3;
+    border-bottom: 0;
+
+    span {
+      display: block;
+      margin-block: 10px;
+    }
+  }
+}
