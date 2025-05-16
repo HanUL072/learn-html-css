@@ -1,0 +1,35 @@
+/* CSS 애니메이션 */
+body {
+  margin: 50px;
+}
+
+/* Transition 애니메이션 */
+.like {
+  border: 5px solid currentColor;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  background: yellow;
+  text-align: center;
+  align-content: center;
+
+  /* 애니메이션 적용범위 */
+  transition-property: background, border-radius, inline-size;
+  /* 애니메이션 실행 속도*/
+  transition-duration: 1000ms, 2000ms, 1s;
+  /* 애니메이션 실행 딜레이 */
+  transition-delay: 0ms, 1000ms, 0s;
+  /* 애니메이션 가속/감속(연결의 자연스러움) 조절 */
+  transition-timing-function: linear;
+
+  /* &:hover {
+    background: pink;
+    border-radius: 50%;
+    inline-size: 300px;
+  } */
+
+  &.transition {
+    background: pink;
+    border-radius: 50%;
+    inline-size: 300px;
+  }
+}
