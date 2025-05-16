@@ -1,0 +1,48 @@
+/* 알림(notification) 복습 */
+:root {
+  --green-300: #22be61;
+  --gray: #9b9a90;
+}
+
+body {
+  margin: 50px;
+}
+
+.component {
+  --base-color: var(--gray);
+
+  /* background: pink; */
+  box-shadow: 0 0 0 1px var(--base-color);
+  border-radius: 0.5rem;
+  padding: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  column-gap: 20px;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  > div {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 4px;
+
+    strong {
+      font-size: 1.125rem;
+    }
+
+    time {
+      font-size: 11px;
+    }
+
+    p {
+      font-size: 0.875rem;
+      color: var(--base-color);
+      inline-size: 100%;
+    }
+  }
+}
