@@ -1,0 +1,36 @@
+/* index.html 화면 꾸미기 */
+body {
+  background: #000;
+  color: #fff;
+}
+
+.headline-1 {
+  background: var(--coral);
+}
+.headline-2 {
+  background: var(--aqua);
+}
+.headline-3 {
+  background: var(--peach);
+}
+.headline-4 {
+  background: var(--mint);
+}
+
+.frontend {
+  display: grid;
+  min-inline-size: 600px;
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  grid-template-rows: repeat(2, minmax(50px, 1fr));
+
+  .group-study {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
