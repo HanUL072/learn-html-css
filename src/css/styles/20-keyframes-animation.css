@@ -1,0 +1,152 @@
+/* 키프레임 애니메이션 */
+body {
+  margin: 50px;
+  background: #000;
+  color: #fff;
+}
+
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
+  grid-auto-rows: 18.75rem;
+  gap: 1.25em;
+} */
+
+/* 키프레임 규칙 */
+@keyframes zoom {
+  from {
+    width: 100px;
+    background: yellow;
+  }
+  100% {
+    width: 200px;
+    background: pink;
+  }
+}
+
+/* 애니메이션 속성 학습을 위한 예제 */
+.like {
+  border: 5px solid currentColor;
+  padding: 10px;
+  width: 100px;
+  /* animation-name: zoom;
+  animation-duration: 10s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  animation-fill-mode: both; */
+  animation-play-state: paused;
+  animation: zoom 5s 1s 3 alternate ease-in-out forwards paused;
+}
+
+/* Fade 애니메이션 */
+.fade .target-animation {
+  animation: fade 2s infinite linear alternate;
+  animation-play-state: paused;
+}
+
+/* shrink 애니메이션 */
+.shrink .target-animation {
+  animation: shrink 2s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Bounce 애니메이션 */
+.bounce .target-animation {
+  animation: bounce 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Shake 애니메이션 */
+.shake .target-animation {
+  animation: shake 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Spin 애니메이션 */
+.case.spin .target-animation {
+  width: 120px;
+  aspect-ratio: 1;
+  background: conic-gradient(red 0% 25%, green 25% 50%, blue 50%, 75%, purple 75% 100%);
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+  animation-play-state: paused;
+}
+
+/* Pulse 애니메이션 */
+.pulse .target-animation {
+  animation: pulse 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* Flip 애니메이션 */
+.flip {
+  perspective: 500px;
+
+  .target-animation {
+    animation: flip 1s infinite ease-in-out;
+    animation-play-state: paused;
+  }
+}
+
+/* Wobble 애니메이션 */
+.wobble .target-animation {
+  animation: wobble 1s infinite ease-in-out alternate;
+  animation-play-state: paused;
+}
+
+/* CSS 변수를 활용한 애니메이션(Rotate) */
+.rotate .target-animation {
+  --rotation: 0deg;
+
+  inline-size: 120px;
+  aspect-ratio: 1;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    background: conic-gradient(from var(--rotation), red, green, yellow, pink, blue, red);
+    /* background: conic-gradient(from var(--rotation), red 0 30%, transparent 30% 100%); */
+    z-index: -1;
+    padding: 5px;
+    inline-size: 100%;
+    block-size: 100%;
+    box-sizing: content-box;
+    translate: -50% -50%;
+    border-radius: 0.5rem;
+    animation: rotate 1s infinite linear;
+    animation-play-state: paused;
+  }
+}
+
+/* case 공통 스타일 (.case) */
+.case .target-animation {
+  border-radius: 8px;
+  padding: 1em;
+  font-size: 24px;
+  font-weight: 700;
+  background: var(--mint);
+  text-align: center;
+  margin-block: 15px;
+}
+
+/* 버튼 꾸미기 */
+.reset-animation {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--sky-blue);
+  color: #fff;
+}
+.toggle-animation {
+  border: 2px solid #fff;
+  padding: 10px;
+  border-radius: 12px;
+  background: var(--dark-blue);
+  color: #fff;
+}
