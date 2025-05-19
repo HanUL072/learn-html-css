@@ -1,9 +1,11 @@
 {
   "scripts": {
     "start": "live-server . --port=3000 --host=localhost --no-browser",
-    "format": "prettier . --check"
+    "format": "prettier . --check",
+    "avif": "avif --input=.'/src/assets/apple/'*.{jpg,jpeg} --output='./src/assets/apple/' --overwrite"
   },
   "devDependencies": {
+    "avif": "^0.5.3",
     "live-server": "^1.2.2",
     "prettier": "^3.5.3"
   }
