@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장바구니 - Cart</title>
+    <link rel="shortcut icon" href="/public/favicon/likelion.ico" type="image/x-icon" />
+    <link rel="icon" href="/public/favicon/likelion.svg" type="image/svg" />
+    <link rel="preload" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="/public/font/suit/SUIT-Variable.css" />
+    <link rel="stylesheet" href="/src/common/index.css" />
+    <link rel="stylesheet" href="/src/ui/cart/cart.css" />
+  </head>
+  <body>
+    <a href="/index.html">메인 페이지 이동</a>
+    <br />
+    <h1>장바구니 - Cart</h1>
+
+    <hr />
+    <h2>헤더 컴포넌트</h2>
+    <div class="component-wrapper">
+      <div class="cart-header">장바구니</div>
+    </div>
+    <div class="component-wrapper">
+      <div class="cart-header">Cart</div>
+    </div>
+    <h2>상품 컴포넌트</h2>
+    <div class="component-wrapper">
+      <div class="cart-product">
+        <figure>
+          <img src="/src/assets/cart/product-04.jpg" alt="" />
+          <figcaption>
+            <a href="/">상품명</a>
+            <span>10,000원</span>
+          </figcaption>
+        </figure>
+        <div>
+          <button class="button-increase" type="button" aria-label="상품 개수 증가"></button>
+          <button class="button-decrease" type="button" aria-label="상품 개수 감소"></button>
+          <output aria-live="assertive" aria-relevant="additions" aria-atmic="true">1</output>
+        </div>
+      </div>
+    </div>
+    <h2>푸터 컴포넌트</h2>
+    <div class="component-wrapper">
+      <div class="cart-footer">
+        <em>구매 총액<span aria-hidden="true"> : </span></em>
+        <output>8,600원</output>
+      </div>
+    </div>
+    <hr />
+
+    <!-- 카트 레이아웃 -->
+    <div class="cart">
+      <h2 class="cart-header">장바구니</h2>
+      <div class="cart-product">
+        <figure>
+          <img src="/src/assets/cart/product-01.jpg" alt="" />
+          <figcaption>
+            <a href="/">1A 우유 900ml</a>
+            <span>1,870 원</span>
+          </figcaption>
+        </figure>
+        <div>
+          <button class="button-increase" type="button" aria-label="상품 개수 증가"></button>
+          <button class="button-decrease" type="button" aria-label="상품 개수 감소"></button>
+          <output aria-live="assertive" aria-relevant="additions" aria-atmic="true">1</output>
+            </div>
+          </div>
+          <div class="cart-product">
+             <figure>
+               <img src="/src/assets/cart/product-04.jpg" alt="" />
+               <figcaption>
+                 <a href="/">맛있는 콩나물 500g</a>
+                 <span>1,280 원</span>
+               </figcaption>
+             </figure>
+            <div>
+              <button class="button-increase" type="button" aria-label="상품 개수 증가"></button>
+              <button class="button-decrease" type="button" aria-label="상품 개수 감소"></button>
+              <output aria-live="assertive" aria-relevant="additions" aria-atmic="true">1</output>
+            </div>
+          </div>
+           <div class="cart-product">
+             <figure>
+           <img src="/src/assets/cart/product-03.jpg" alt="" />
+           <figcaption>
+             <a href="/">고소한 두부 1kg</a>
+             <span>2,210 원</span>
+           </figcaption>
+         </figure>
+         <div>
+           <button class="button-increase" type="button" aria-label="상품 개수 증가"></button>
+           <button class="button-decrease" type="button" aria-label="상품 개수 감소"></button>
+           <output aria-live="assertive" aria-relevant="additions" aria-atmic="true">1</output>
+         </div>
+       </div>
+       <div class="component-wrapper">
+          <div class="cart-footer">
+            <em>구매 총액<span aria-hidden="true"> : </span></em>
+            <output>8,600원</output>
+          </div>
+        </div>
+    </div>
+</div>
+  </body>
+</html>
