@@ -1,0 +1,73 @@
+/* Sub Grid */
+body {
+  margin: 50px;
+}
+
+.bootcamp {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto auto auto auto;
+  column-gap: 10px;
+
+  .like {
+    border: 2px solid gray;
+    padding: 1em;
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    gap: 10px;
+
+    img {
+      inline-size: 100%;
+      aspect-ratio: 3/2;
+      object-fit: cover;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      order: -1;
+      word-break: keep-all;
+    }
+
+    p {
+      color: gray;
+    }
+
+    a {
+      display: block;
+      padding: 0.5em 1em;
+      background: darkblue;
+      color: white;
+      justify-self: end;
+    }
+  }
+}
+
+/* 레이아웃 */
+.layout {
+  display: grid;
+  grid-template-columns: [full-start] minmax(1rem, 1fr) [content-start] repeat(12, minmax(5.3125rem, 1fr)) [content-end] minmax(1rem, 1fr) [full-end];
+  grid-template-rows: 50px;
+  color: white;
+
+  .header {
+    background: red;
+    grid-column: 3 / span 5;
+  }
+  .navigation {
+    background: green;
+    grid-column: full;
+  }
+  .main {
+    background: blue;
+    grid-column: content;
+  }
+  .sidebar {
+    background: purple;
+    grid-column: 10 / full-end;
+  }
+  .footer {
+    background: gray;
+    grid-column: content-start/ full-end;
+  }
+}
