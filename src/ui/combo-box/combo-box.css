@@ -1,0 +1,51 @@
+/* 콤보 박스 */
+body {
+  margin: 50px;
+}
+
+/* inline-grid를 활용한 combo box UI */
+.combo-box {
+  background: goldenrod;
+  display: inline-grid;
+  grid-template-columns: auto;
+  /* place-items: center; */
+  align-items: center;
+  padding: 4px 12px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  /* isolation: isolate; */
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px green;
+  }
+
+  .global,
+  .arrow {
+    /* z-index: -1; */
+    pointer-events: none;
+  }
+
+  .global,
+  .form-combo,
+  .arrow {
+    grid-area: 1/ 1/ 2/ 2;
+  }
+
+  .global {
+    justify-self: start;
+  }
+
+  .form-combo {
+    select {
+      outline: 0 none;
+      appearance: none;
+      border: 0;
+      background: transparent;
+      padding: 4px 20px;
+    }
+  }
+
+  .arrow {
+    justify-self: end;
+  }
+}
