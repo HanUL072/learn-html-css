@@ -1,0 +1,75 @@
+/* Stacking contaxt */
+body {
+  margin: 50px;
+}
+
+.bootcamp {
+  border: 5px solid red;
+  inline-size: 200px;
+  aspect-ratio: 1;
+  position: relative;
+  background: goldenrod;
+  isolation: isolate;
+
+  .like,
+  .lion {
+    inline-size: 50%;
+    aspect-ratio: 1;
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    translate: -50% -50%;
+  }
+
+  .like {
+    background: lightgreen;
+  }
+
+  .lion {
+    background: blue;
+    /* translate: 25px -25px; */
+    inline-size: 60%;
+    z-index: -1;
+  }
+
+  .frontend {
+    inline-size: 100%;
+    block-size: 100%;
+    text-align: center;
+    align-content: center;
+    position: absolute;
+  }
+}
+
+.wrapper {
+  border: 5px solid blue;
+  padding: 10px 100px;
+  display: flex;
+  flex-flow: row nowrap;
+
+  div {
+    inline-size: 100px;
+    aspect-ratio: 1;
+    margin-inline-start: -50px;
+    border-radius: 50%;
+    text-align: center;
+    align-content: center;
+
+    &:hover {
+      z-index: 1;
+    }
+  }
+
+  .box1 {
+    background: yellow;
+  }
+  .box2 {
+    background: pink;
+  }
+  .box3 {
+    background: skyblue;
+  }
+  .box4 {
+    background: orange;
+  }
+}
